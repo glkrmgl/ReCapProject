@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using System;
 
@@ -8,7 +9,7 @@ namespace Console_UI
     {
         static void Main(string[] args)
         {
-            CarManager carManager = new CarManager(new InMemoryCarDal());
+            CarManager carManager = new CarManager(new EfCarDal());
             foreach (var car in carManager.GetAll())
             {
                 Console.WriteLine(car.CarId);
@@ -21,7 +22,17 @@ namespace Console_UI
             Console.WriteLine("---------------------");
             Console.WriteLine();
 
-            ColorManager colorManager = new ColorManager(new InMemoryColorDal());
+            foreach (var car in carManager.GetCarsByBrandId(2))
+            {
+                Console.WriteLine(car.CarId+ " : "+ car.Description);
+              
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("---------------------");
+            Console.WriteLine();
+
+            ColorManager colorManager = new ColorManager(new EfColorDal());
             foreach (var color in colorManager.GetAll())
             {
                 Console.WriteLine(color.ColorId);
@@ -32,7 +43,7 @@ namespace Console_UI
             Console.WriteLine("---------------------");
             Console.WriteLine();
 
-            BrandManager brandManager = new BrandManager(new InMemoryBrandDal());
+            BrandManager brandManager = new BrandManager(new EfBrandDal());
             foreach (var brand in brandManager.GetAll())
             {
                 Console.WriteLine(brand.BrandId);
