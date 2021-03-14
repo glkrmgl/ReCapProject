@@ -24,7 +24,7 @@ namespace DataAccess.Concrete.InMemory
             };
         }
 
-        public void Add(Brand brand)
+        public void Insert(Brand brand)
         {
             _brands.Add(brand);
         }

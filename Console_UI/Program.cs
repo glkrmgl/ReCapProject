@@ -18,6 +18,13 @@ namespace Console_UI
 
             }
 
+            Console.WriteLine("-------- Getdetails deneme ---------------");
+            Console.WriteLine();
+            foreach (var car in carManager.GetCarDetails())
+            {
+                Console.WriteLine(car.BrandId+"--> "+car.DailyPrice+" "+car.Description);
+            }
+
             Console.WriteLine();
             Console.WriteLine("---------------------");
             Console.WriteLine();
@@ -49,6 +56,9 @@ namespace Console_UI
                 Console.WriteLine(brand.BrandId);
                 Console.WriteLine(brand.BrandName);
             }
+
+
+           
 
 
         }
