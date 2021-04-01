@@ -24,7 +24,7 @@ namespace DataAccess.Concrete.InMemory
             };
 
         }
-        public void Insert(Car car)
+        public void Add(Car car)
         {
             _cars.Add(car);
         }

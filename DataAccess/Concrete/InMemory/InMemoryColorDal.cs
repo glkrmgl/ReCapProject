@@ -25,7 +25,7 @@ namespace DataAccess.Concrete.InMemory
             };
         }
        
-        public void Insert(Color color)
+        public void Add(Color color)
         {
             _colors.Add(color);
         }
