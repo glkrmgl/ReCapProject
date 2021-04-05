@@ -73,7 +73,10 @@ namespace Console_UI
                 Console.WriteLine(brand.BrandId);
                 Console.WriteLine(brand.BrandName);
             }
-           
+
+
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+
 
         }
 
