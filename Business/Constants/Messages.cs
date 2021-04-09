@@ -14,5 +14,5 @@ namespace Business.Constants
         public static string UserAdded = "Yeni Kullanıcı Eklendi.";
         public static string UserNameInvalid = "Kullanıcı İsmi Geçersiz! Kullanıcı İsmi en az 2 karakterli Olmalı!";
         public static string CompanyNameInvalid = "Şirket İsmi Geçersiz!";
-;    }
+    }
 }

@@ -35,7 +35,7 @@ namespace Business.Concrete
             return new ErrorResult("Araç Kiralama İşleminiz silindi/ iptal edildi!");
         }
 
-        public IDataResult<List<Rental>> GetAll(Rental rental)
+        public IDataResult<List<Rental>> GetAll()
         {
             return new SuccessDataResult<List<Rental>>("Kiralanmış Araç Listesi Getirildi!");
         }

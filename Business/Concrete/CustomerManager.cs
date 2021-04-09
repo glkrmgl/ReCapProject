@@ -37,14 +37,14 @@ namespace Business.Concrete
             return new SuccessResult("Müşteri Silindi!");
         }
 
-        public IDataResult<List<Customer>> GetAll(Customer customer)
+        public IDataResult<List<Customer>> GetAll()
         {
             return new SuccessDataResult<List<Customer>>(_customerDal.GetAll(), "Kullanıcılar Listesi Getirildi!");
         }
 
-        public IDataResult<List<Customer>> GetByUserId(int userid)
+        public IDataResult<List<Customer>> GetByCustomerId(int customerid)
         {
-            return new SuccessDataResult<List<Customer>>(_customerDal.GetAll(p => p.UserId == userid), "... müşteri getirildi!");
+            return new SuccessDataResult<List<Customer>>(_customerDal.GetAll(p => p.UserId == customerid), "... müşteri getirildi!");
 
         }
 

@@ -37,7 +37,7 @@ namespace Business.Concrete
             return new SuccessResult("Kullanıcı Silindi!");
         }
 
-        public IDataResult<List<User>> GetAll(User user)
+        public IDataResult<List<User>> GetAll()
         {
             return new SuccessDataResult<List<User>>(_userDal.GetAll(), "Kullanıcılar Listesi Getirildi!");
         }
